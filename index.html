@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Add Data to DB</title>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+	<h1>CSV file upload</h1>
+
+	<form method="POST" action="patientIntergration.php" enctype="multipart/form-data">
+
+		<div class="form-group">
+
+			<label>Upload data into database</label>
+
+			<input type="file" name="fileName" class="form-control" onchange="doSomething(this.value)">
+
+		</div>
+
+		<div class="form-group">
+
+			<button type="submit" name="Submit" class="btn btn-success">Upload</button>
+
+		</div>
+
+	</form>
+
+</div>
+
+</body>
+
+</html>
