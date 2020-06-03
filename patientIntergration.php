@@ -1,6 +1,6 @@
 <?php
 /////////////////////////////////////////////////////////////////////
-// Autor:Jean Janvier -> Singular Medical Technology (SMT)       ///
+// Autor:Jean Janvier                                            ///
 // Date: 2/1/18                                                 ///
 // Purpose: compare old and new data, check for duplicate data ///
 // Purpose: insert new data in database                       ///
@@ -10,11 +10,6 @@ echo "<br>";
 error_reporting(E_ALL);
 //ini_set('display_errors', 1);
 include 'inc/db.php'; 
-
-///////////////////////////////////////////////////////////////////////////////////////////
-//covert dot CSV file to SQL query and import new data into the database              ////
-//import file to the parent table                                                    ////
-////////////////////////////////////////////////////////////////////////////////////////
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -28,14 +23,10 @@ $parent = "temp1";
 $sql= "CREATE TEMPORARY TABLE $parent LIKE account";
 $result = $conn->query($sql);
 
-//asign input to a variable
-//im using this variable to name the input
-//this should take the file and upload it 
+
 $fileName = $_POST['fileName'];
 
-//load data to hashedpassword
-//$sql="LOAD DATA LOCAL INFILE 'edme.csv' INTO TABLE $parent
-//this is my change on line 37
+
 $sql="LOAD DATA LOCAL INFILE 'fileName' INTO TABLE $parent  
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '\"' 
