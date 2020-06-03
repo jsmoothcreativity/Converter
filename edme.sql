@@ -37,9 +37,9 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`patient_account`, `patient_LN`, `patient_FN`) VALUES
-('1', 'Victor', 'Bertrand\r'),
-('2', 'Janvier', 'Edmee\r'),
-('3', 'Victor', 'Nella\r');
+('1', 'redacted', 'Bertrand\r'),
+('2', 'redacted', 'Edmee\r'),
+('3', 'redacted', 'Nella\r');
 
 --
 -- Indexes for dumped tables
